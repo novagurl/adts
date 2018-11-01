@@ -93,3 +93,65 @@ void List::remove(int k)
 	
 	//Implementations of missing operations
 	
+void List::clear()
+	{
+	while (num_elements > 0)
+	{
+
+	remove (1);
+	}
+
+	}
+
+
+
+
+int List::get(int k)
+	{
+	
+	if (k < 1 or k > num_elements)//if the location is invalid 
+	     throw out_of_range("List::remove(" +to_string(k)+") failed. (valid indices are 1 to "+to_string(num_elements)+")");//throw an 	"out_of_range" exception
+
+	Node * tmpPtr = frontPtr;
+	for (int i=1; i <=k-1; i++)
+	{
+	tmpPtr=tmpPtr -> link;
+
+	}
+
+	return tmpPtr -> data;
+
+
+	}
+
+
+void List::display()
+	{
+ 
+	for(Node* tmpPtr=frontPtr; tmpPtr!=nullptr; tmpPtr=tmpPtr->link)
+	{
+	cout<<tmpPtr -> data<<" ";
+	}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

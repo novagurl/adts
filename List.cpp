@@ -125,14 +125,7 @@ int List::get(int k)
 	}
 
 
-void List::display()
-	{
- 
-	for(Node* tmpPtr=frontPtr; tmpPtr!=nullptr; tmpPtr=tmpPtr->link)
-	{
-	cout<<tmpPtr -> data<<" ";
-	}
-	}
+
 
 
 
